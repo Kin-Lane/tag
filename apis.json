@@ -1,7 +1,7 @@
 {
   "name": "Kin Lane - Tag",
-  "description": "This is my default tag API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
-  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tag-icon.png",
+  "description": "This is my default tag API, using it to manage my tags in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
+  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tag.png",
   "tags": [
     "application programming interface",
     "API",
@@ -15,7 +15,7 @@
     {
       "name": "Tag",
       "description": "A tag API resource.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tag-icon.png",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-tag.png",
       "humanURL": "https://kin-lane.github.io/tag/",
       "baseURL": "http://tag.api.kinlane.com",
       "tags": [
