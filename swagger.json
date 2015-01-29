@@ -1,0 +1,261 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Tag",
+    "description": "This is a tag api",
+    "termsOfService": "http://stack.network/terms-of-service.html",
+    "version": "v1"
+  },
+  "host": "tag.api.kinlane.com",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "taglication/json"
+  ],
+  "paths": {
+    "tag/": {
+      "get": {
+        "summary": "retrieves all tags",
+        "description": "pulls all tags, with filter by keyword",
+        "operationId": "getTags",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "a text query to search across tag",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tag response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag",
+          "tagging"
+        ]
+      },
+      "post": {
+        "summary": "add tag",
+        "description": "add a new tag",
+        "operationId": "addTag",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "name of the tag",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "description": "description of the tag",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "in": "query",
+            "description": "url for the tag",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "tags for the tag",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tag response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag",
+          "tagging"
+        ]
+      }
+    },
+    "tag/{slug}": {
+      "get": {
+        "summary": "Retrieve a tag using its slug",
+        "description": "Returns the tag detail",
+        "operationId": "getTag",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "slug for the tag, notice this is in the path, not a query variable",
+            "required": "true",
+            "type": "integer",
+            "format": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tag response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag",
+          "tagging"
+        ]
+      },
+      "put": {
+        "summary": "update tag",
+        "description": "update tag",
+        "operationId": "updateTag",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "unique slug for the tag",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "name of the tag",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "description": "description of the tag",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "in": "query",
+            "description": "url for the tag",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "tags for the tag",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tag response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag",
+          "tagging"
+        ]
+      },
+      "delete": {
+        "summary": "delete tag",
+        "description": "deletes an tag",
+        "operationId": "deleteTag",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "unique slug for the tag",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "tag response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag",
+          "tagging"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "tag": {
+      "properties": {
+        "name": {
+          "description": "name of the tag",
+          "type": "string",
+          "format": "label"
+        },
+        "description": {
+          "description": "description of the tag",
+          "type": "string"
+        },
+        "url": {
+          "description": "url for the tag",
+          "type": "string"
+        },
+        "tags": {
+          "description": "tags for the tag",
+          "type": "string"
+        },
+        "slug": {
+          "description": "slug for the tag",
+          "type": "string",
+          "format": "id"
+        }
+      }
+    },
+    "errorModel": {
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
