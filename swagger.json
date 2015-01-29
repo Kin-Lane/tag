@@ -51,23 +51,9 @@
         "operationId": "addTag",
         "parameters": [
           {
-            "name": "name",
+            "name": "tag",
             "in": "query",
             "description": "name of the tag",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "in": "query",
-            "description": "description of the tag",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "url",
-            "in": "query",
-            "description": "url for the tag",
             "required": true,
             "type": "string"
           },
@@ -140,23 +126,9 @@
             "type": "string"
           },
           {
-            "name": "name",
+            "name": "tag",
             "in": "query",
             "description": "name of the tag",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "in": "query",
-            "description": "description of the tag",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "url",
-            "in": "query",
-            "description": "url for the tag",
             "required": true,
             "type": "string"
           },
@@ -218,18 +190,10 @@
   "definitions": {
     "tag": {
       "properties": {
-        "name": {
+        "tag": {
           "description": "name of the tag",
           "type": "string",
           "format": "label"
-        },
-        "description": {
-          "description": "description of the tag",
-          "type": "string"
-        },
-        "url": {
-          "description": "url for the tag",
-          "type": "string"
         },
         "tags": {
           "description": "tags for the tag",
