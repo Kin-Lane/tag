@@ -30,10 +30,8 @@ $app->get($route, function ()  use ($app){
 	while ($Database = mysql_fetch_assoc($DatabaseResult))
 		{
 
-		$tag_id = $Database['tag_id'];
-		$tag = $Database['tag'];
-		$description = $Database['description'];
-		$url = $Database['url'];
+		$tag_id = $Database['Tag_ID'];
+		$tag = $Database['Tag'];
 
 		// manipulation zone
 
