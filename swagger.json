@@ -15,10 +15,10 @@
     "taglication/json"
   ],
   "paths": {
-    "tag/": {
+    "/tag/": {
       "get": {
         "summary": "retrieves all tags",
-        "description": "pulls all tags, with filter by keyword",
+        "description": "retrieves all tags",
         "operationId": "getTags",
         "parameters": [
           {
@@ -41,8 +41,7 @@
           }
         },
         "tags": [
-          "tag",
-          "tagging"
+          "Tag"
         ]
       },
       "post": {
@@ -77,24 +76,22 @@
           }
         },
         "tags": [
-          "tag",
-          "tagging"
+          "Tag"
         ]
       }
     },
-    "tag/{slug}": {
+    "/tag/{tag_id}/": {
       "get": {
-        "summary": "Retrieve a tag using its slug",
-        "description": "Returns the tag detail",
+        "summary": "get tag",
+        "description": "get tag",
         "operationId": "getTag",
         "parameters": [
           {
-            "name": "slug",
+            "name": "tag_id",
             "in": "path",
-            "description": "slug for the tag, notice this is in the path, not a query variable",
-            "required": "true",
-            "type": "integer",
-            "format": "id"
+            "description": "the unique id for the tag",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -109,8 +106,7 @@
           }
         },
         "tags": [
-          "tag",
-          "tagging"
+          "Tag"
         ]
       },
       "put": {
@@ -119,9 +115,9 @@
         "operationId": "updateTag",
         "parameters": [
           {
-            "name": "slug",
+            "name": "tag_id",
             "in": "path",
-            "description": "unique slug for the tag",
+            "description": "unique tag_id for the tag",
             "required": true,
             "type": "string"
           },
@@ -162,9 +158,9 @@
         "operationId": "deleteTag",
         "parameters": [
           {
-            "name": "slug",
+            "name": "tag_id",
             "in": "path",
-            "description": "unique slug for the tag",
+            "description": "unique id for the tag",
             "required": true,
             "type": "string"
           }
@@ -199,25 +195,10 @@
           "description": "tags for the tag",
           "type": "string"
         },
-        "slug": {
-          "description": "slug for the tag",
+        "tag_id": {
+          "description": "tag_id for the tag",
           "type": "string",
           "format": "id"
-        }
-      }
-    },
-    "errorModel": {
-      "required": [
-        "code",
-        "message"
-      ],
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
         }
       }
     }
