@@ -1,0 +1,162 @@
+{
+	"id": "afe570ff-77f6-eeca-f7cc-83590a6a99af",
+	"name": "Tag",
+	"description": "This is a tag api",
+	"order": [],
+	"folders": [
+		{
+			"id": "39485c9b-3c5c-3102-ab77-449d98a2f47c",
+			"name": "tag",
+			"description": "Folder for tag",
+			"order": [
+				"e60f1eb9-08c9-c4d2-00a6-e17a3e99f9c6",
+				"884c9d5f-be51-1819-651a-93cdabe6e97d",
+				"b1004e3c-367a-d9f2-e0f8-b685090ad083",
+				"6cc61a71-607b-1e20-cc4b-52837e7ee4d7",
+				"412ed4b9-0f6c-62ee-9a82-0b131eac38f4"
+			],
+			"collection_name": "Tag",
+			"collection_id": "afe570ff-77f6-eeca-f7cc-83590a6a99af",
+			"collection": "9f38e070-54b8-45f1-a4fa-f311fe5ae56a",
+			"owner": "27278",
+			"write": true,
+			"collection_owner": "27278"
+		}
+	],
+	"timestamp": 1413302258635,
+	"owner": "27278",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "412ed4b9-0f6c-62ee-9a82-0b131eac38f4",
+			"headers": "",
+			"url": "http://tag.api.kinlane.com//tag/{{tag_id}}/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "deletes an tag",
+			"descriptionFormat": "html",
+			"time": 1441437003000,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "afe570ff-77f6-eeca-f7cc-83590a6a99af",
+			"name": "delete tag",
+			"folder": "39485c9b-3c5c-3102-ab77-449d98a2f47c"
+		},
+		{
+			"id": "6cc61a71-607b-1e20-cc4b-52837e7ee4d7",
+			"headers": "",
+			"url": "http://tag.api.kinlane.com//tag/{{tag_id}}/?tag={{tag}}&tags={{tags}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "update tag",
+			"descriptionFormat": "html",
+			"time": 1441437003000,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "afe570ff-77f6-eeca-f7cc-83590a6a99af",
+			"name": "update tag",
+			"folder": "39485c9b-3c5c-3102-ab77-449d98a2f47c"
+		},
+		{
+			"id": "884c9d5f-be51-1819-651a-93cdabe6e97d",
+			"headers": "",
+			"url": "http://tag.api.kinlane.com//tag/?tag={{tag}}&tags={{tags}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add a new tag",
+			"descriptionFormat": "html",
+			"time": 1441437003000,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "afe570ff-77f6-eeca-f7cc-83590a6a99af",
+			"name": "add tag",
+			"folder": "39485c9b-3c5c-3102-ab77-449d98a2f47c"
+		},
+		{
+			"id": "b1004e3c-367a-d9f2-e0f8-b685090ad083",
+			"headers": "",
+			"url": "http://tag.api.kinlane.com//tag/{{tag_id}}/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "get tag",
+			"descriptionFormat": "html",
+			"time": 1441437003000,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "afe570ff-77f6-eeca-f7cc-83590a6a99af",
+			"name": "get tag",
+			"folder": "39485c9b-3c5c-3102-ab77-449d98a2f47c"
+		},
+		{
+			"id": "e60f1eb9-08c9-c4d2-00a6-e17a3e99f9c6",
+			"headers": "",
+			"url": "http://tag.api.kinlane.com//tag/?query={{query}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "retrieves all tags",
+			"descriptionFormat": "html",
+			"time": 1441437003000,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "afe570ff-77f6-eeca-f7cc-83590a6a99af",
+			"name": "retrieves all tags",
+			"folder": "39485c9b-3c5c-3102-ab77-449d98a2f47c"
+		}
+	]
+}
